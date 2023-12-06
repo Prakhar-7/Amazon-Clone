@@ -7,7 +7,7 @@ import { useStateValue } from './StateProvider';
 
 function Header() {
 
-  const [{ basket }, despatch] = useStateValue()
+  const [{ basket }, dispatch] = useStateValue()
 
   return (
     <div className='header'>
@@ -21,10 +21,13 @@ function Header() {
       </div>
 
       <div className='header_nav'>
-        <div className='header_option'>
-            <span className='header_optionLineOne'>Hello, sign in</span>
-            <span className='header_optionLineTwo'>Accounts & Lists</span>
-        </div>
+
+        <Link to='/login'>
+          <div className='header_option'>
+              <span className='header_optionLineOne'>Hello, sign in</span>
+              <span className='header_optionLineTwo'>Accounts & Lists</span>
+          </div>
+        </Link>
         <div className='header_option'>
             <span className='header_optionLineOne'>Returns</span>
             <span className='header_optionLineTwo'>& Orders</span>
